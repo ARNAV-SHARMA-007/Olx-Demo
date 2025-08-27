@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp Demo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 30%;
+      background: #f0f2f5;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid #ddd;
+    }
+
+    .sidebar-header {
+      padding: 15px;
+      background: #ededed;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .search {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    .search input {
+      width: 100%;
+      padding: 8px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+    }
+
+    .chat-list {
+      flex: 1;
+      overflow-y: auto;
+    }
+    .chat {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      cursor: pointer;
+      border-bottom: 1px solid #eee;
+    }
+    .chat:hover {
+      background: #ebebeb;
+    }
+    .chat img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .chat .info {
+      flex: 1;
+    }
+    .chat .info h4 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .chat .info p {
+      margin: 0;
+      font-size: 12px;
+      color: gray;
+    }
+
+    /* Chat Area */
+    .chat-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background: #ece5dd;
+    }
+
+    .chat-header {
+      padding: 15px;
+      background: #ededed;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+    }
+    .chat-header img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .messages {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .message {
+      padding: 8px 12px;
+      margin: 8px 0;
+      border-radius: 7px;
+      display: inline-block;
+      max-width: 60%;
+      font-size: 14px;
+    }
+    .sent {
+      background: #dcf8c6;
+      align-self: flex-end;
+    }
+    .received {
+      background: white;
+      align-self: flex-start;
+    }
+
+    .chat-input {
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      background: #f0f2f5;
+    }
+    .chat-input input {
+      flex: 1;
+      padding: 10px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+    }
+    .chat-input button {
+      margin-left: 10px;
+      background: #25d366;
+      border: none;
+      padding: 10px 15px;
+      color: white;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h3>Chats</h3>
+    </div>
+    <div class="search">
+      <input type="text" placeholder="Search or start new chat">
+    </div>
+    <div class="chat-list">
+      <div class="chat">
+        <img src="https://i.pravatar.cc/40?img=1" alt="">
+        <div class="info">
+          <h4>Nowfal</h4>
+          <p>"How are you?"</p>
+        </div>
+      </div>
+      <div class="chat">
+        <img src="https://i.pravatar.cc/40?img=2" alt="">
+        <div class="info">
+          <h4>Rohan</h4>
+          <p>"I'll be there."</p>
+        </div>
+      </div>
+      <div class="chat">
+        <img src="https://i.pravatar.cc/40?img=3" alt="">
+        <div class="info">
+          <h4>Zoya</h4>
+          <p>"Make somebody's day."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chat Area -->
+  <div class="chat-area">
+    <div class="chat-header">
+      <img src="https://i.pravatar.cc/40?img=4" alt="">
+      <div>
+        <h4>Leo</h4>
+        <p>Online</p>
+      </div>
+    </div>
+    <div class="messages">
+      <div class="message received">We should video chat to discuss, if you’re up for it!</div>
+      <div class="message sent">Sure</div>
+      <div class="message sent">I’m free now!</div>
+      <div class="message received">Awesome! I’ll start a video chat with you in a few.</div>
+    </div>
+    <div class="chat-input">
+      <input type="text" placeholder="Type a message">
+      <button>➤</button>
+    </div>
+  </div>
+</body>
+</html>
